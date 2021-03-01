@@ -61,7 +61,7 @@ class FaceDetect {
 
             $stats = $this->get_img_stats($this->reduced_canvas);
             $this->face = $this->do_detect_greedy_big_to_small($stats['ii'], $stats['ii2'], $stats['width'], $stats['height']);
-            if ($this->face['w'] > 0) {
+            if ($this->face!=null && $this->face['w'] > 0) {
                 $this->face['x'] *= $ratio;
                 $this->face['y'] *= $ratio;
                 $this->face['w'] *= $ratio;
